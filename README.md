@@ -7,8 +7,11 @@ yarn start
 
 ## Tasks
 
+- [ ] Simple design
+  - [ ] homepage
+  - [ ] Detail
 - [x] router, homepage, detailpage and 404.
-  - [ ] make seperate component
+  - [x] make seperate component
 
 ### Make simple design
 

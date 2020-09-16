@@ -1,11 +1,6 @@
 import React from "react";
-import {
-	BrowserRouter as Router,
-	Switch,
-	Route,
-	Link,
-	useParams,
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { HomePage, DetailPage, NotFoundPage } from "./containers";
 
 export default function AppRouter() {
 	return (
@@ -29,11 +24,11 @@ export default function AppRouter() {
 				</nav>
 
 				<Switch>
-					<Route path="/ticket-detail/:ticketId">
+					<Route path="/ticket-detail/:ticketId" exact>
 						<DetailPage />
 					</Route>
 					<Route path="/" exact>
-						<Home />
+						<HomePage></HomePage>
 					</Route>
 					<Route path="*">
 						<NotFoundPage />
@@ -42,22 +37,4 @@ export default function AppRouter() {
 			</div>
 		</Router>
 	);
-}
-
-function Home() {
-	return <h2>Home</h2>;
-}
-
-function DetailPage() {
-	let { ticketId } = useParams();
-	return (
-		<div>
-			<h2>Detail page </h2>
-			<p> ticket id is {ticketId} </p>
-		</div>
-	);
-}
-
-function NotFoundPage() {
-	return <h2>This page is not found.</h2>;
 }
