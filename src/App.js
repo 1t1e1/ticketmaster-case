@@ -1,14 +1,13 @@
 import React from "react";
 import "./App.css";
 import AppRouter from "./Router";
-// import Comps from "./components";
+import { Container } from "reactstrap";
 
 function App() {
 	return (
-		<div className="App">
+		<Container>
 			<AppRouter></AppRouter>
-			{/* <Comps.SearchInput></Comps.SearchInput> */}
-		</div>
+		</Container>
 	);
 }
 
