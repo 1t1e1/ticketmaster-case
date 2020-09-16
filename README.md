@@ -7,6 +7,9 @@ yarn start
 
 ## Tasks
 
+- [x] router, homepage, detailpage and 404.
+  - [ ] make seperate component
+
 ### Make simple design
 
 just input text button display
