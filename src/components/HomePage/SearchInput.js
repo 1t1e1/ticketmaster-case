@@ -1,10 +1,20 @@
 import React from "react";
+import { InputGroup, Input, InputGroupAddon, InputGroupText } from "reactstrap";
 
-export default function SearchInput() {
+export default function SearchInput({ value, handleChange }) {
 	return (
 		<div>
-			<div></div>
-			<div>SearchInput from Component</div>
+			<h1> state " {value} " </h1>
+			<div>
+				<InputGroup>
+					<Input />
+					<InputGroupAddon addonType="append">
+						<InputGroupText>Search</InputGroupText>
+					</InputGroupAddon>
+				</InputGroup>
+
+				<input type="text" value={value} onChange={handleChange} />
+			</div>
 		</div>
 	);
 }

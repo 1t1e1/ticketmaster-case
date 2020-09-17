@@ -8,10 +8,28 @@ yarn start
 ## Tasks
 
 - [ ] Simple design
-  - [ ] homepage
-  - [ ] Detail
+
+  - [ ] Home Page
+
+    - [ ] SearchInput
+
+      - [x] first draft
+      - [ ] functional
+
+    - [ ] Table
+
+      - [ ] first draft
+      - [ ] functional
+
+    - [ ] Make pagination
+
+  - [ ] Detail Page
+
+- [ ] Redux
+
 - [x] router, homepage, detailpage and 404.
   - [x] make seperate component
+  - [x] react-router ve reactstrap calismiyor.
 
 ### Make simple design
 
@@ -24,7 +42,7 @@ uye olmadan [ buradaki ](https://developer.ticketmaster.com/api-explorer/v2/) ap
 
 ornek kullanim. [request](https://app.ticketmaster.com/discovery/v2/events.json?countryCode=US&apikey=7elxdku9GGG5k8j0Xm8KWdANDgecHMV0)
 
-### Socurce notes
+### Futher Reading
 
 #### Redux
 
