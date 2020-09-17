@@ -7,6 +7,8 @@ yarn start
 
 ## Tasks
 
+- [ ] Redux
+
 - [ ] Simple design
 
   - [ ] Home Page
@@ -18,14 +20,13 @@ yarn start
 
     - [ ] Table
 
-      - [ ] first draft
+      - [x] first draft
+      - [x] inputs Arrays => list of rows
       - [ ] functional
 
     - [ ] Make pagination
 
   - [ ] Detail Page
-
-- [ ] Redux
 
 - [x] router, homepage, detailpage and 404.
   - [x] make seperate component
@@ -35,6 +36,10 @@ yarn start
 
 just input text button display
 
+Input onChange sadece state i degistirsin, search button istek atsin
+
+Table in icerisine loding animastionu koy.
+
 ### Api Usage
 
 uye olmadan [ buradaki ](https://developer.ticketmaster.com/api-explorer/v2/) api-key kullanilabilir.
@@ -42,7 +47,7 @@ uye olmadan [ buradaki ](https://developer.ticketmaster.com/api-explorer/v2/) ap
 
 ornek kullanim. [request](https://app.ticketmaster.com/discovery/v2/events.json?countryCode=US&apikey=7elxdku9GGG5k8j0Xm8KWdANDgecHMV0)
 
-### Futher Reading
+### Further Reading
 
 #### Redux
 

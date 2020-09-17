@@ -1,5 +1,6 @@
-import { SearchInput } from "./HomePage";
+// import { SearchInput, Table, Row } from "./HomePage";
+import { SearchInput, Table } from "./HomePage";
 
-const Comps = { SearchInput };
+const Comps = { SearchInput, Table };
 
 export default Comps;

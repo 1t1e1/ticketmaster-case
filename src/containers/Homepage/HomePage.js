@@ -24,10 +24,9 @@ export default function Homepage() {
 		setValue(e.target.value);
 	};
 
-	const pre = JSON.stringify(state, null, 2);
+	if (!state) return <div> loading from home page </div>;
 	const { _embedded, page } = state;
-
-	if (!state) return <div> loading </div>;
+	const pre = JSON.stringify(state, null, 2);
 
 	console.log(_embedded);
 	console.log(page);
@@ -37,6 +36,9 @@ export default function Homepage() {
 				value={value}
 				handleChange={handleChange}
 			></Comps.SearchInput>
+			<Comps.Table data={_embedded.events}>
+				<div> what is it </div>
+			</Comps.Table>
 			<pre>response is {pre}</pre>
 		</div>
 	);
