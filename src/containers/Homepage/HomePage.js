@@ -2,11 +2,10 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 import Comps from "../../components";
-import { request_url } from "../../constant";
 // import { Pagination } from "../../components/HomePage";
+import { request_url } from "../../constant";
 
 export default function Homepage() {
-	const [value, setValue] = useState("hii!");
 	const [state, setState] = useState("");
 	useEffect(() => {
 		axios
@@ -21,10 +20,6 @@ export default function Homepage() {
 			});
 	}, []);
 
-	const handleChange = (e) => {
-		setValue(e.target.value);
-	};
-
 	if (!state) return <div> loading from home page </div>;
 	const { _embedded, page } = state;
 	const pre = JSON.stringify(page, null, 2);
@@ -33,10 +28,7 @@ export default function Homepage() {
 	console.log(page);
 	return (
 		<div>
-			<Comps.SearchInput
-				value={value}
-				handleChange={handleChange}
-			></Comps.SearchInput>
+			<Comps.SearchInput></Comps.SearchInput>
 			<Comps.Table data={_embedded.events}>
 				<div> what is it </div>
 			</Comps.Table>

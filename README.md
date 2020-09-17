@@ -7,7 +7,9 @@ yarn start
 
 ## Tasks
 
+- oncelikler
 - [ ] Redux
+- [ ] api parameters
 
 - [ ] Simple design
 
@@ -16,7 +18,7 @@ yarn start
     - [ ] SearchInput
 
       - [x] first draft
-      - [ ] functional
+      - [x] functional
       - [ ] Redux a bagla.
 
     - [ ] Table
