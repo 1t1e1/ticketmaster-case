@@ -64,3 +64,8 @@ hackernon test driven dev todo app [part 1 ](https://hackernoon.com/a-guide-to-t
 TDD cok guzel video form netherlands usa [ link] (
 https://www.youtube.com/watch?v=tvlE2p_rt9E
 )
+
+#### how to import
+
+`Comps.` ile tum componentleri cok kolayca ulasabiliyorum.
+Neden diger projelerde boyle bisey kullanilmadigini arastir.

@@ -1,6 +1,7 @@
-// import { SearchInput, Table, Row } from "./HomePage";
-import { SearchInput, Table } from "./HomePage";
+import Comp from "./HomePage";
+// import { SearchInput, Table, Pagination } from "./HomePage";
 
-const Comps = { SearchInput, Table };
+// const Comps = { SearchInput, Table, Pagination };
+// const Comps = { ...Comp };
 
-export default Comps;
+export default Comp;

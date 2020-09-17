@@ -1,5 +1,5 @@
 import React from "react";
-import { Row } from "./";
+import Row from "./Row";
 
 export default function Table({ data, loading }) {
 	console.log(data);
