@@ -17,6 +17,7 @@ yarn start
 
       - [x] first draft
       - [ ] functional
+      - [ ] Redux a bagla.
 
     - [ ] Table
 
@@ -25,6 +26,9 @@ yarn start
       - [ ] functional
 
     - [ ] Make pagination
+      - [ ] hazir pagination packageleri varmis. (sourcelara bakilabilir.)
+      - [x] [Traversy Media Video ](https://www.youtube.com/watch?v=IYCa1F-OWmk) guzelmis.
+      - [ ] Redux a bagla.
 
   - [ ] Detail Page
 
