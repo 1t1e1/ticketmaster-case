@@ -19,7 +19,7 @@ export default function SearchInput() {
 
 	return (
 		<div>
-			<h1> state " {inputTerm} " </h1>
+			<h1> Input state " {inputTerm} " </h1>
 			<InputGroup>
 				<Input
 					placeholder={"Search..."}

@@ -28,11 +28,11 @@ yarn start
       - [ ] functional
 
     - [ ] Make pagination
-      - [ ] hazir pagination packageleri varmis. (sourcelara bakilabilir.)
+      - [ ] hazir pagination [ packageleri ](https://www.npmjs.com/package/react-responsive-pagination) varmis. (source kodlarina bakilabilir.)
       - [x] [Traversy Media Video ](https://www.youtube.com/watch?v=IYCa1F-OWmk) guzelmis.
       - [ ] Redux a bagla.
 
-  - [ ] Detail Page
+- [ ] Detail Page
 
 - [x] router, homepage, detailpage and 404.
   - [x] make seperate component

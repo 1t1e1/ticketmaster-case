@@ -19,10 +19,9 @@ const PaginationComp = ({ size, totalElements, totalPages, number }) => {
 	return (
 		<>
 			<div>
-				<p>Pagination infos: page is</p>
 				<p>
-					size, {size}, totalElements,{totalElements}, totalPages, {totalPages},
-					number, {number},
+					Pagination infos: size:{size}, totalElements:{totalElements},
+					totalPages:{totalPages}, number:{number},
 				</p>
 			</div>
 			<Pagination aria-label="Page navigation example">
