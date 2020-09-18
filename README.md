@@ -7,8 +7,16 @@ yarn start
 
 ## Tasks
 
-- oncelikler
+oncelikler
+
+Pagination i `link` deki reqeust url gibi yapilacak.
+
 - [ ] Redux
+
+  - [x] Provided
+  - [x] redux-thynk
+  - [ ] work fine on home page
+
 - [ ] api parameters
 
 - [ ] Simple design
@@ -63,15 +71,22 @@ taming redux kitabindaki thunk bolumunu oku.
 
 [redux error handling and async action guzel video](https://www.youtube.com/watch?v=tcCS4mGAq7Q&list=PLC3y8-rFHvwheJHvseC3I0HuYI2f46oAK&index=29)
 
+#### Data vs object destruction
+
+Redux taki tum response datasini nasil tutacagina karar veremedim.
+`{event, page , link} = Actions.payload ` veya `data = action.payload`
+
 #### Testing
 
 hackernon test driven dev todo app [part 1 ](https://hackernoon.com/a-guide-to-tdd-a-react-redux-todolist-app-part-1-b8a200bb7091) , 2, 3 , 4
 
-TDD cok guzel video form netherlands usa [ link] (
-https://www.youtube.com/watch?v=tvlE2p_rt9E
-)
+TDD cok guzel video form netherlands usa [ link](https://www.youtube.com/watch?v=tvlE2p_rt9E)
 
 #### how to import
 
 `Comps.` ile tum componentleri cok kolayca ulasabiliyorum.
 Neden diger projelerde boyle bisey kullanilmadigini arastir.
+
+### Cikarimlar
+
+Yeni projelere container pages ve redux i yaparak basla.

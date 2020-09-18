@@ -1,39 +1,32 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
-
+import { useDispatch, useSelector } from "react-redux";
+import { getEvents } from "../../state/ducks/mainTable/actions";
 import Comps from "../../components";
 // import { Pagination } from "../../components/HomePage";
-import { request_url } from "../../constant";
 
 export default function Homepage() {
-	const [state, setState] = useState("");
+	const { data, isLoading, errorMessage } = useSelector((state) => ({
+		data: state.mainTable.data,
+		isLoading: state.mainTable.isLoading,
+		errorMessage: state.mainTable.errorMessage,
+	}));
+	const dispatch = useDispatch();
 	useEffect(() => {
-		axios
-			.get(request_url)
-			.then((res) => {
-				const data = res.data;
-				setState(data);
-			})
-			.catch((err) => {
-				setState("");
-				console.log(err);
-			});
+		dispatch(getEvents());
 	}, []);
 
-	if (!state) return <div> loading from home page </div>;
-	const { _embedded, page } = state;
-	const pre = JSON.stringify(page, null, 2);
+	if (isLoading) return <div> loading from home page </div>;
+	// daha guzel nasil yazilabilir?
+	if (!data._embedded) return <div> false case loading from home page </div>;
+	if (errorMessage) return <div> Error Message</div>;
 
-	console.log(_embedded);
-	console.log(page);
+	const { _embedded, page, _links } = data;
+
 	return (
 		<div>
 			<Comps.SearchInput></Comps.SearchInput>
-			<Comps.Table data={_embedded.events}>
-				<div> what is it </div>
-			</Comps.Table>
+			<Comps.Table data={_embedded.events}></Comps.Table>
 			<Comps.Pagination {...page}></Comps.Pagination>
-			{/* <pre>response is {pre}</pre> */}
 		</div>
 	);
 }
