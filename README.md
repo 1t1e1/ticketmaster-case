@@ -14,8 +14,9 @@ Pagination i `link` deki reqeust url gibi yapilacak.
 - [ ] Redux
 
   - [x] Provided
-  - [x] redux-thynk
-  - [ ] work fine on home page
+  - [x] redux-thunk
+  - [x] work fine on home page, search
+  - [ ] work fine on pagination, detail page
 
 - [ ] api parameters
 
@@ -27,7 +28,7 @@ Pagination i `link` deki reqeust url gibi yapilacak.
 
       - [x] first draft
       - [x] functional
-      - [ ] Redux a bagla.
+      - [x] Redux a bagla.
 
     - [ ] Table
 
@@ -73,6 +74,8 @@ extra bir package ile yapmislar. [ github ](https://github.com/PCreations/redux-
 
 Redux statelerine componentler tarafindan ulasilmasi, hepsinin containerdekiler tarafindan asagiya verilmesinden daha mantikli geldi. Degistirdim. Arastirilacak.
 
+guzel redux [ post ](https://thinkster.io/tutorials/react-redux-pagination)
+
 ##### Redux thunk Async
 
 try out thunk getstate example [redux doc ](https://redux.js.org/tutorials/essentials/part-5-async-logic#thunk-functions)
@@ -80,6 +83,10 @@ try out thunk getstate example [redux doc ](https://redux.js.org/tutorials/essen
 taming redux kitabindaki thunk bolumunu oku.
 
 [redux error handling and async action guzel video](https://www.youtube.com/watch?v=tcCS4mGAq7Q&list=PLC3y8-rFHvwheJHvseC3I0HuYI2f46oAK&index=29)
+
+anlamsiz keyword verdigimde catch blogu calisiyor ama error mesaji yok.
+Ayrica then blogu da calisiyor.
+??? action daki koda tekrar bakilacak.
 
 #### Data vs object destruction
 

@@ -1,18 +1,17 @@
 import * as Actions from "./types";
 import Axios from "axios";
-import { request_url } from "../../../constant";
 
-const getEvents = () => {
+const getEvents = (url) => {
 	return (dispatch) => {
 		dispatch({
 			type: Actions.LOAD_START,
 		});
-		Axios.get(`${request_url}`)
+		Axios.get(`${url}`)
 			.then((result) => {
 				dispatch({ type: Actions.LOAD_EVENTS, payload: result.data });
 			})
 			.catch((error) => {
-				console.log("reducer", error);
+				console.log("action error ", error);
 				dispatch({ type: Actions.LOAD_ERROR, payload: error });
 			});
 	};

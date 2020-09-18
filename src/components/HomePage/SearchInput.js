@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { InputGroup, Input, InputGroupAddon, InputGroupText } from "reactstrap";
+import { useDispatch } from "react-redux";
+import { getEvents } from "../../state/ducks/mainTable/actions";
+import { req_producer } from "../../constant";
 
 export default function SearchInput() {
 	const [inputTerm, setInputTerm] = useState("");
@@ -7,13 +10,14 @@ export default function SearchInput() {
 		setInputTerm(e.target.value);
 	};
 
+	const dispatch = useDispatch();
 	const handleClick = () => {
-		console.log("clicked ");
+		dispatch(getEvents(req_producer(inputTerm.trim())));
 	};
 
 	const handleEnter = (e) => {
 		if (e.key === "Enter") {
-			console.log("enter press");
+			dispatch(getEvents(req_producer(inputTerm.trim())));
 		}
 	};
 
