@@ -65,6 +65,16 @@ ornek kullanim. [request](https://app.ticketmaster.com/discovery/v2/events.json?
 
 #### Redux
 
+##### Redux pagination
+
+extra bir package ile yapmislar. [ github ](https://github.com/PCreations/redux-paginator)
+
+[ 5 tips for redux large app blog post.](https://medium.com/xandr-tech/five-tips-for-working-with-redux-in-large-applications-89452af4fdcb#cb70)
+
+Redux statelerine componentler tarafindan ulasilmasi, hepsinin containerdekiler tarafindan asagiya verilmesinden daha mantikli geldi. Degistirdim. Arastirilacak.
+
+##### Redux thunk Async
+
 try out thunk getstate example [redux doc ](https://redux.js.org/tutorials/essentials/part-5-async-logic#thunk-functions)
 
 taming redux kitabindaki thunk bolumunu oku.

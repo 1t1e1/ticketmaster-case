@@ -1,12 +1,15 @@
 import * as Actions from "./types";
 
 const initialState = {
-	data: [],
+	data: {},
+	events: [],
+	page: {},
+	links: [],
 	isLoading: false,
 	errorMessage: "",
 };
 
-function refReducer(state = initialState, action) {
+function eventsReducer(state = initialState, action) {
 	switch (action.type) {
 		case Actions.LOAD_START:
 			return {
@@ -15,13 +18,15 @@ function refReducer(state = initialState, action) {
 			};
 		case Actions.LOAD_EVENTS:
 			return {
-				...state,
 				data: action.payload,
+				events: action.payload._embedded.events,
+				page: action.payload.page,
+				links: action.payload._links,
 				isLoading: false,
 			};
 		case Actions.LOAD_ERROR:
 			return {
-				data: [],
+				...state,
 				errorMessage: action.payload,
 				isLoading: false,
 			};
@@ -30,4 +35,4 @@ function refReducer(state = initialState, action) {
 	}
 }
 
-export default refReducer;
+export default eventsReducer;

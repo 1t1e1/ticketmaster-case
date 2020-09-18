@@ -5,8 +5,7 @@ import Comps from "../../components";
 // import { Pagination } from "../../components/HomePage";
 
 export default function Homepage() {
-	const { data, isLoading, errorMessage } = useSelector((state) => ({
-		data: state.mainTable.data,
+	const { isLoading, errorMessage } = useSelector((state) => ({
 		isLoading: state.mainTable.isLoading,
 		errorMessage: state.mainTable.errorMessage,
 	}));
@@ -17,16 +16,14 @@ export default function Homepage() {
 
 	if (isLoading) return <div> loading from home page </div>;
 	// daha guzel nasil yazilabilir?
-	if (!data._embedded) return <div> false case loading from home page </div>;
+	// if (!data._embedded) return <div> false case loading from home page </div>;
 	if (errorMessage) return <div> Error Message</div>;
-
-	const { _embedded, page, _links } = data;
 
 	return (
 		<div>
 			<Comps.SearchInput></Comps.SearchInput>
-			<Comps.Table data={_embedded.events}></Comps.Table>
-			<Comps.Pagination {...page}></Comps.Pagination>
+			<Comps.Table></Comps.Table>
+			<Comps.Pagination></Comps.Pagination>
 		</div>
 	);
 }

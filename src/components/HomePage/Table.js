@@ -1,19 +1,19 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import Row from "./Row";
 
 export default function Table({ data, loading }) {
-	console.log(data);
+	const { events } = useSelector((state) => ({
+		events: state.mainTable.events,
+	}));
+
 	if (loading) {
-		return (
-			<div className="my-table">
-				kullaniciya islem yapildigina dair bir seyler goster
-			</div>
-		);
+		return <div className="my-table">Loading from table</div>;
 	} else {
 		return (
 			<div className="my-table">
 				<h1> Table</h1>
-				{data.map((item, index) => {
+				{events.map((item, index) => {
 					return <Row key={item.id}>{item.name}</Row>;
 				})}
 			</div>

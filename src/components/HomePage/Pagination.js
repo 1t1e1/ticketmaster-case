@@ -1,9 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { useSelector } from "react-redux";
 import { Pagination, PaginationItem, PaginationLink } from "reactstrap";
 
-const PaginationComp = ({ size, totalElements, totalPages, number }) => {
+const PaginationComp = () => {
+	const { page } = useSelector((state) => ({
+		page: state.mainTable.page,
+	}));
+
+	const { size, totalElements, totalPages, number } = page;
+
+	const paginationLong = 9;
 	const pageArray = [];
-	for (let i = 1; i <= 80; i++) pageArray.push(i);
+	for (let i = 1; i <= paginationLong; i++) pageArray.push(i);
 
 	const handleClick = (num) => {
 		if (num === "last") {
@@ -15,7 +23,6 @@ const PaginationComp = ({ size, totalElements, totalPages, number }) => {
 		}
 	};
 
-	const paginationLong = 9;
 	return (
 		<>
 			<div>
