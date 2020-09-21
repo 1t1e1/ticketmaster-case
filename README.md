@@ -24,17 +24,20 @@ Pagination i `link` deki reqeust url gibi yapilacak.
 
   - [ ] Home Page
 
-    - [ ] SearchInput
+    - [x] SearchInput
 
       - [x] first draft
       - [x] functional
       - [x] Redux a bagla.
 
-    - [ ] Table
+    - [x] Table
 
       - [x] first draft
       - [x] inputs Arrays => list of rows
-      - [ ] functional
+      - [x] functional
+      - [x] detail button link to detail
+      - [x] thumbnail image ekle.
+      - [x] numaralari pagination a gore degistir. her zaman 1 den baslamasin.
 
     - [ ] Make pagination
       - [ ] hazir pagination [ packageleri ](https://www.npmjs.com/package/react-responsive-pagination) varmis. (source kodlarina bakilabilir.)

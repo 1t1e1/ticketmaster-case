@@ -22,8 +22,7 @@ export default function SearchInput() {
 	};
 
 	return (
-		<div>
-			<h1> Input state " {inputTerm} " </h1>
+		<div className="mb-4">
 			<InputGroup>
 				<Input
 					placeholder={"Search..."}
