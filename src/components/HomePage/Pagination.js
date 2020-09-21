@@ -1,25 +1,53 @@
-import React from "react";
-import { useSelector } from "react-redux";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Pagination, PaginationItem, PaginationLink } from "reactstrap";
+import { req_producer_pagi } from "../../constant";
+import { getEvents } from "../../state/ducks/mainTable/actions";
 
-const PaginationComp = () => {
-	const { page } = useSelector((state) => ({
+const PaginationComp = ({ pagilong }) => {
+	const [pageArray, setpageArray] = useState([]);
+	const { page, links } = useSelector((state) => ({
 		page: state.mainTable.page,
+		links: state.mainTable.links,
 	}));
 
 	const { size, totalElements, totalPages, number } = page;
+	const { first, last, next, self } = links;
+	const dispatch = useDispatch();
 
-	const paginationLong = 9;
-	const pageArray = [];
-	for (let i = 1; i <= paginationLong; i++) pageArray.push(i);
+	useEffect(() => {
+		// width okuyup responsive yapilabilir.
+
+		// it must be change
+		const pagelong = pagilong - 1;
+		const tempArray = [];
+		let tempConst = 0;
+
+		for (let i = number - pagelong; i <= number + pagelong + 2; i++) {
+			if (number - pagelong < 1) {
+				tempConst = Math.abs(number - pagelong) + 1;
+			} else if (totalPages - number < pagelong + 2) {
+				tempConst = -(pagelong - (totalPages - number) + 2);
+			}
+
+			tempArray.push(tempConst + i);
+		}
+
+		setpageArray(tempArray);
+
+		return () => {};
+	}, [number]);
 
 	const handleClick = (num) => {
 		if (num === "last") {
-			console.log("last page will load");
+			dispatch(getEvents(req_producer_pagi(last.href)));
+			console.log("last ", req_producer_pagi(last.href));
 		} else if (num === "first") {
-			console.log("first page will load");
+			dispatch(getEvents(req_producer_pagi(first.href, 0)));
+			console.log("first ", req_producer_pagi(first.href, 0));
 		} else {
-			console.log(`${num}. page will load`);
+			dispatch(getEvents(req_producer_pagi(first.href, num - 1)));
+			console.log(num, req_producer_pagi(first.href, num));
 		}
 	};
 
@@ -39,28 +67,25 @@ const PaginationComp = () => {
 					<PaginationLink
 						previous
 						href="#"
-						onClick={() => handleClick(number - 1)}
+						onClick={() => handleClick(number)}
 					/>
 				</PaginationItem>
 
-				{pageArray.map(
-					(item) =>
-						Math.abs(item - number) < paginationLong && (
-							<PagiItem
-								key={item}
-								text={item}
-								active={item === number + 1}
-								clickHandle={() => {
-									handleClick(item);
-								}}
-							></PagiItem>
-						)
-				)}
+				{pageArray.map((item) => (
+					<PagiItem
+						key={item}
+						text={item}
+						active={item === number + 1}
+						clickHandle={() => {
+							if (item !== number + 1) handleClick(item);
+						}}
+					></PagiItem>
+				))}
 				<PaginationItem disabled={totalPages === number}>
 					<PaginationLink
 						next
 						href="#"
-						onClick={() => handleClick(number + 1)}
+						onClick={() => handleClick(number + 2)}
 					/>
 				</PaginationItem>
 				<PaginationItem disabled={totalPages === number}>

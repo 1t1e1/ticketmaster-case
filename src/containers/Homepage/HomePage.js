@@ -31,7 +31,7 @@ export default function Homepage() {
 		<div>
 			<Comps.SearchInput></Comps.SearchInput>
 			<Comps.Table></Comps.Table>
-			<Comps.Pagination></Comps.Pagination>
+			<Comps.Pagination pagilong={3}></Comps.Pagination>
 		</div>
 	);
 }

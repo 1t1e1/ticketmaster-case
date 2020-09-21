@@ -15,8 +15,8 @@ Pagination i `link` deki reqeust url gibi yapilacak.
 
   - [x] Provided
   - [x] redux-thunk
-  - [x] work fine on home page, search
-  - [ ] work fine on pagination, detail page
+  - [x] work fine on home page, search, pagination
+  - [ ] work fine on detail page
 
 - [ ] api parameters
 
@@ -39,7 +39,17 @@ Pagination i `link` deki reqeust url gibi yapilacak.
     - [ ] Make pagination
       - [ ] hazir pagination [ packageleri ](https://www.npmjs.com/package/react-responsive-pagination) varmis. (source kodlarina bakilabilir.)
       - [x] [Traversy Media Video ](https://www.youtube.com/watch?v=IYCa1F-OWmk) guzelmis.
-      - [ ] Redux a bagla.
+      - [x] Redux a bagla.
+      - [x] sayfa 1 deyken 1 tiklayinca yeniden render oluyor
+      - [x] sayfa 5 deyken 1 ,,, 9 a kadar gorunsun.
+      - [x] Son sayfadaki gorunumu, ilk sayfaya gore simetrik.
+        - [x] yapay son sayfa yaparak denendi.
+      - [ ] sayfa 250 dan sonra hata aliyorum. api discovery in kisitlamasi olabilir.
+      - [x] 3,4,5,6 gecislerine bak
+      - [x] next, previous, first and last button
+      - [ ] tekrar bakilacak. Problemli taraflari
+        - [ ] pagilong 1 fazla.
+        - [ ] total page azsa pagination array yine de uzun oluyor. tekrar gozden gecirilecek.
 
 - [ ] Detail Page
 
@@ -56,6 +66,8 @@ Input onChange sadece state i degistirsin, search button istek atsin
 Table in icerisine loding animastionu koy.
 
 ### Api Usage
+
+regex ile kullanmak daha kolay ve mantikli geliyor.
 
 uye olmadan [ buradaki ](https://developer.ticketmaster.com/api-explorer/v2/) api-key kullanilabilir.
 `apikey=7elxdku9GGG5k8j0Xm8KWdANDgecHMV0`
