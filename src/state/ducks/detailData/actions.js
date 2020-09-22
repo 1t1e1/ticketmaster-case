@@ -8,10 +8,10 @@ const getEvents = (url) => {
 		});
 		Axios.get(`${url}`)
 			.then((result) => {
-				dispatch({ type: Actions.LOAD_EVENTS, payload: result.data });
+				dispatch({ type: Actions.LOAD_DETAIL, payload: result.data });
 			})
 			.catch((error) => {
-				console.log("action error main table", error);
+				console.log("action error detail data", error);
 				dispatch({ type: Actions.LOAD_ERROR, payload: error });
 			});
 	};

@@ -1,5 +1,6 @@
 const request_url = "https://app.ticketmaster.com";
 const _package = "/discovery/v2/events.json?";
+const _package_detail = "/discovery/v2/events/";
 const country = "countryCode=US";
 const api_key = "&apikey=7elxdku9GGG5k8j0Xm8KWdANDgecHMV0";
 const page_param = "&page=";
@@ -20,4 +21,9 @@ function req_producer_pagi(link_first, pageNum) {
 	return result;
 }
 
-export { req_producer, req_producer_pagi };
+function req_for_id(id) {
+	let result = request_url + _package_detail;
+	return result + id + ".json?" + api_key;
+}
+
+export { req_producer, req_producer_pagi, req_for_id };

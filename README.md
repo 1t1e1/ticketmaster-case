@@ -20,41 +20,44 @@ Pagination i `link` deki reqeust url gibi yapilacak.
 
 - [ ] api parameters
 
-- [ ] Simple design
+- [x] Home Page
 
-  - [ ] Home Page
+  - [x] SearchInput
 
-    - [x] SearchInput
+    - [x] first draft
+    - [x] functional
+    - [x] Redux a bagla.
 
-      - [x] first draft
-      - [x] functional
-      - [x] Redux a bagla.
+  - [x] Table
 
-    - [x] Table
+    - [x] first draft
+    - [x] inputs Arrays => list of rows
+    - [x] functional
+    - [x] detail button link to detail
+    - [x] thumbnail image ekle.
+    - [x] numaralari pagination a gore degistir. her zaman 1 den baslamasin.
 
-      - [x] first draft
-      - [x] inputs Arrays => list of rows
-      - [x] functional
-      - [x] detail button link to detail
-      - [x] thumbnail image ekle.
-      - [x] numaralari pagination a gore degistir. her zaman 1 den baslamasin.
-
-    - [ ] Make pagination
-      - [ ] hazir pagination [ packageleri ](https://www.npmjs.com/package/react-responsive-pagination) varmis. (source kodlarina bakilabilir.)
-      - [x] [Traversy Media Video ](https://www.youtube.com/watch?v=IYCa1F-OWmk) guzelmis.
-      - [x] Redux a bagla.
-      - [x] sayfa 1 deyken 1 tiklayinca yeniden render oluyor
-      - [x] sayfa 5 deyken 1 ,,, 9 a kadar gorunsun.
-      - [x] Son sayfadaki gorunumu, ilk sayfaya gore simetrik.
-        - [x] yapay son sayfa yaparak denendi.
-      - [ ] sayfa 250 dan sonra hata aliyorum. api discovery in kisitlamasi olabilir.
-      - [x] 3,4,5,6 gecislerine bak
-      - [x] next, previous, first and last button
-      - [ ] tekrar bakilacak. Problemli taraflari
-        - [ ] pagilong 1 fazla.
-        - [ ] total page azsa pagination array yine de uzun oluyor. tekrar gozden gecirilecek.
+  - [ ] Make pagination
+    - [ ] hazir pagination [ packageleri ](https://www.npmjs.com/package/react-responsive-pagination) varmis. (source kodlarina bakilabilir.)
+    - [x] [Traversy Media Video ](https://www.youtube.com/watch?v=IYCa1F-OWmk) guzelmis.
+    - [x] Redux a bagla.
+    - [x] sayfa 1 deyken 1 tiklayinca yeniden render oluyor
+    - [x] sayfa 5 deyken 1 ,,, 9 a kadar gorunsun.
+    - [x] Son sayfadaki gorunumu, ilk sayfaya gore simetrik.
+      - [x] yapay son sayfa yaparak denendi.
+    - [ ] sayfa 250 dan sonra hata aliyorum. api discovery in kisitlamasi olabilir.
+    - [x] 3,4,5,6 gecislerine bak
+    - [x] next, previous, first and last button
+    - [ ] tekrar bakilacak. Problemli taraflari
+      - [ ] pagilong 1 fazla.
+      - [ ] total page azsa pagination array yine de uzun oluyor. tekrar gozden gecirilecek.
+    - [ ] Testleri yazarken refactoru dusunurek yaz.
 
 - [ ] Detail Page
+
+  - [ ] Redux data async
+    - [x] farkli bir reducer yap.
+  - [ ] Style
 
 - [x] router, homepage, detailpage and 404.
   - [x] make seperate component
