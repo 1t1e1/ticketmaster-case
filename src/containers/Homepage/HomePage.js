@@ -1,9 +1,8 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getEvents } from "../../state/ducks/mainTable/actions";
-import Comps from "../../components";
 import { req_producer } from "../../constant";
-// import { Pagination } from "../../components/HomePage";
+import { SearchInput, Table, Pagination } from "../../components";
 
 export default function Homepage() {
 	const { isLoading, errorMessage } = useSelector((state) => ({
@@ -29,9 +28,9 @@ export default function Homepage() {
 
 	return (
 		<div>
-			<Comps.SearchInput></Comps.SearchInput>
-			<Comps.Table></Comps.Table>
-			<Comps.Pagination pagilong={3}></Comps.Pagination>
+			<SearchInput></SearchInput>
+			<Table></Table>
+			<Pagination pagilong={3}></Pagination>
 		</div>
 	);
 }

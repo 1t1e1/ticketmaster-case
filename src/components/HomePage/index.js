@@ -3,4 +3,4 @@ import Table from "./Table";
 import Row from "./Row";
 import Pagination from "./Pagination";
 
-export default { SearchInput, Table, Row, Pagination };
+export { SearchInput, Table, Row, Pagination };

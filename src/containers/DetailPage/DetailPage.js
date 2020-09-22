@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { req_for_id } from "../../constant";
 import { getEvents } from "../../state/ducks/detailData/actions";
+import { EventInfo, DetailImage } from "../../components";
 
 export default function DetailPage() {
 	let { ticketId } = useParams();
@@ -22,9 +23,13 @@ export default function DetailPage() {
 	}, []);
 
 	if (isLoading) return <div> Loading in detail page </div>;
+	if (errorMessage) return <div> {errorMessage}</div>;
 
+	console.log(data.images);
 	return (
 		<div>
+			<EventInfo></EventInfo>
+			<DetailImage images={data.images}></DetailImage>
 			Detail page from container
 			<p> id is {ticketId}</p>
 			<p> {JSON.stringify(data, null, 4)} </p>

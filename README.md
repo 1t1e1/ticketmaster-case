@@ -121,6 +121,10 @@ TDD cok guzel video form netherlands usa [ link](https://www.youtube.com/watch?v
 
 `Comps.` ile tum componentleri cok kolayca ulasabiliyorum.
 Neden diger projelerde boyle bisey kullanilmadigini arastir.
+[ Tree Shaking ](https://developer.mozilla.org/en-US/docs/Glossary/Tree_shaking)
+den dolayi `Comps.` sekilde kullanilmiyormus.
+
+- [ ] import export u iyi anlayarak daha otomatik hale getirilebilir.
 
 ### Cikarimlar
 

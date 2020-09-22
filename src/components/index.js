@@ -1,7 +1,6 @@
-import Comp from "./HomePage";
-// import { SearchInput, Table, Pagination } from "./HomePage";
+import { SearchInput, Table, Pagination } from "./HomePage";
+import { EventInfo, DetailImage } from "./DetailPage";
 
-// const Comps = { SearchInput, Table, Pagination };
-// const Comps = { ...Comp };
+export { SearchInput, Table, Pagination, EventInfo, DetailImage };
 
-export default Comp;
+// daha otomatik hale getirilebilir.
