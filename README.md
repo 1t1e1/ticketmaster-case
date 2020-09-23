@@ -79,7 +79,7 @@ Table in icerisine loding animastionu koy.
 
 ### Api Usage
 
-regex ile kullanmak daha kolay ve mantikli geliyor.
+- [ ] Axios parameterleri kendi ayarlayabiliyormus. Function yazmaya yada regex ile degistirmeye gerek yok. Refactor. [blog](https://masteringjs.io/tutorials/axios/get-query-params)
 
 uye olmadan [ buradaki ](https://developer.ticketmaster.com/api-explorer/v2/) api-key kullanilabilir.
 `apikey=7elxdku9GGG5k8j0Xm8KWdANDgecHMV0`
