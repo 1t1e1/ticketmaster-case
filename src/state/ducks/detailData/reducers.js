@@ -1,6 +1,7 @@
 import * as Actions from "./types";
 
 const initialState = {
+	imagesrc: "",
 	data: {},
 	isLoading: false,
 	errorMessage: "",
@@ -17,6 +18,9 @@ function eventsReducer(state = initialState, action) {
 		case Actions.LOAD_DETAIL:
 			return {
 				data: action.payload,
+				imagesrc: action.payload.images.find(
+					(image) => image.width === 640 && image.ratio === "3_2"
+				).url,
 				isLoading: false,
 			};
 

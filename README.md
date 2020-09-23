@@ -9,14 +9,13 @@ yarn start
 
 oncelikler
 
-Pagination i `link` deki reqeust url gibi yapilacak.
-
 - [ ] Redux
 
   - [x] Provided
   - [x] redux-thunk
   - [x] work fine on home page, search, pagination
   - [ ] work fine on detail page
+  - [ ] selectors denenecek.
 
 - [ ] api parameters
 
@@ -55,9 +54,16 @@ Pagination i `link` deki reqeust url gibi yapilacak.
 
 - [ ] Detail Page
 
-  - [ ] Redux data async
-    - [x] farkli bir reducer yap.
-  - [ ] Style
+  - [x] Basic, islevsel page yapilsin
+  - [ ] input kisalt.
+  - [x] priceRange olmayin sadece buy buttonu ciksin.
+  - [ ] defaultProps kullan
+  - [ ] eventinfo yu bootstrap card ile yapilabilir.
+  - [ ] data.sales da da dates var, incele.
+
+- [ ] Redux data async
+  - [x] farkli bir reducer yap.
+- [ ] Style
 
 - [x] router, homepage, detailpage and 404.
   - [x] make seperate component
@@ -83,6 +89,22 @@ ornek kullanim. [request](https://app.ticketmaster.com/discovery/v2/events.json?
 ### Further Reading
 
 #### Redux
+
+##### Canical state , app state and ui state.
+
+**canonical state**: api dan gelen data.
+Redux da bu sekilde tutmak mantiksiz ve beni en fazla zorlayan kisim burasi oldu.
+Bu konuyla ilgili arastirmam gerekenler.
+Yani canonical state te nerede, nasil islemler yapip app state e donusturmeliyim.
+Keywords: Hashing, redux Selector patern,
+
+- [ ] selector function cozum olabilir. [querying redux](https://medium.com/@adamrackis/querying-a-redux-store-37db8c7f3b0f)
+
+- [ ] [hacker noon selecter pattern](https://hackernoon.com/selector-pattern-painless-redux-store-destructuring-bfc26b72b9ae#5f2d)
+
+- [ ] izlenecek [dan abramov egg head ](https://egghead.io/lessons/javascript-redux-the-middleware-chain) te redux dersi cok guzel duruyor.
+
+- [ ] Bu sorunun cozumunun [selectors ](https://gist.github.com/abhiaiyer91/aaf6e325cf7fc5fd5ebc70192a1fa170) oldugunu soyleyen kucuk bir post.
 
 ##### Redux pagination
 
@@ -110,6 +132,9 @@ Ayrica then blogu da calisiyor.
 
 Redux taki tum response datasini nasil tutacagina karar veremedim.
 `{event, page , link} = Actions.payload ` veya `data = action.payload`
+(canonical state konusuyla ayni)
+
+[ nested state in redux doc ] ( https://redux.js.org/faq/organizing-state#how-do-i-organize-nested-or-duplicate-data-in-my-state)
 
 #### Testing
 

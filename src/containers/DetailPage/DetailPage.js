@@ -4,35 +4,43 @@ import { useDispatch, useSelector } from "react-redux";
 import { req_for_id } from "../../constant";
 import { getEvents } from "../../state/ducks/detailData/actions";
 import { EventInfo, DetailImage } from "../../components";
+import { Row, Col } from "reactstrap";
 
 export default function DetailPage() {
 	let { ticketId } = useParams();
-	const { isLoading, data, errorMessage } = useSelector((state) => ({
+	const { isLoading, data, errorMessage, imagesrc } = useSelector((state) => ({
 		isLoading: state.detailData.isLoading,
 		errorMessage: state.detailData.errorMessage,
 		data: state.detailData.data,
+		imagesrc: state.detailData.imagesrc,
 	}));
 
 	const dispatch = useDispatch();
 
 	useEffect(() => {
 		dispatch(getEvents(req_for_id(ticketId)));
-		console.log("DetailPage -> req_for_id", req_for_id(ticketId));
-
-		return () => {};
 	}, []);
 
 	if (isLoading) return <div> Loading in detail page </div>;
 	if (errorMessage) return <div> {errorMessage}</div>;
 
-	console.log(data.images);
+	const { name, dates, priceRanges, accessibility } = { ...data };
+
+	console.log("name, dates", name, dates);
+	console.log(data);
 	return (
-		<div>
-			<EventInfo></EventInfo>
-			<DetailImage images={data.images}></DetailImage>
-			Detail page from container
-			<p> id is {ticketId}</p>
-			<p> {JSON.stringify(data, null, 4)} </p>
-		</div>
+		<Row>
+			<Col md="7">
+				{imagesrc && <DetailImage imagesrc={imagesrc}></DetailImage>}
+			</Col>
+			<Col md="5">
+				<EventInfo
+					name={name}
+					dates={dates}
+					priceRanges={priceRanges}
+					accessibility={accessibility}
+				></EventInfo>
+			</Col>
+		</Row>
 	);
 }

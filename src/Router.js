@@ -13,21 +13,6 @@ export default function AppRouter() {
 							Home
 						</NavLink>
 					</NavItem>
-					<NavItem>
-						<NavLink tag={Link} to="/ticket-detail/192932012">
-							Detial 192932012
-						</NavLink>
-					</NavItem>
-					<NavItem>
-						<NavLink tag={Link} to="/ticket-detail/918299248">
-							Detial 918299248
-						</NavLink>
-					</NavItem>
-					<NavItem>
-						<NavLink tag={Link} to="/not-matched">
-							404 page
-						</NavLink>
-					</NavItem>
 				</Nav>
 
 				<Switch>

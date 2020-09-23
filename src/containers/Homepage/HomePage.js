@@ -20,7 +20,6 @@ export default function Homepage() {
 	if (errorMessage)
 		return (
 			<div>
-				{" "}
 				<h3> Error Message : </h3>
 				<div>{JSON.stringify(errorMessage, null, 8)} </div>
 			</div>
